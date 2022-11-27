@@ -9,6 +9,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("favicon");
   eleventyConfig.addPassthroughCopy("fonts");
 
   eleventyConfig.addPlugin(pluginRss);
