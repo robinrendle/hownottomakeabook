@@ -45,9 +45,11 @@
         --color-text-light: #eee;
         --border: #555;
         --horizontal-padding: 15px;
-        --text-size: 1.45rem;
         --heading-size: 5rem;
+        --subheading-size: 3rem;
         --intro-size: 1.5rem;
+        --text-size: 1.45rem;
+        --small-size: 3rem;
       }
 
       @media screen and (min-width: 700px) {
@@ -62,6 +64,7 @@
           --text-size: 1.6rem;
           --heading-size: 8rem;
           --intro-size: 1.8rem;
+          --subheading-size: 6rem;
         }
       }
 
@@ -118,7 +121,7 @@
       h2 {
         font-family: "Magnet", Georgia, serif;
         text-transform: uppercase;
-        font-size: 50px;
+        font-size: var(--small-size);
         color: var(--color-gray);
         margin-top: 0;
         margin-bottom: 0;
@@ -127,7 +130,7 @@
       .post-list {
         font-family: "Magnet", Georgia, serif;
         text-transform: uppercase;
-        font-size: 90px;
+        font-size: var(--subheading-size);
         list-style: none;
         padding: 0;
         margin-bottom: 0;
@@ -234,6 +237,10 @@
         font-size: var(--intro-size);
         max-width: 780px;
         line-height: 1.2;
+      }
+
+      .intro a {
+        text-decoration-thickness: 1px;
       }
     </style>
   </head>
