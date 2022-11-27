@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container container--dark">
+  <h1>How Not To Make a Book</h1>
+
+  <p class="intro">There’s almost too much to care for; the design, paper stock, binding, proofreading, logistics, then—not to forget and most important of all—the words you need to write inside. But what does that process look like? And how do you publish an independent book in 2022?</p>
+
+  <p class="intro">Let’s find out.</p>
+
+  <p class="intro"><em>How Not To Write a Book</em> is a weekly newsletter by me, your friendly neighborhood blogger Robin Rendle, where I figure out how to make a book from scratch. There’ll be drama! Failure! <em>Anxiety!</em> Jokes! Revenge! And, of course, books.</p>
+
+  <form
+    action="https://buttondown.email/api/emails/embed-subscribe/hownottomakeabook"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.email/hownottomakeabook', 'popupwindow')"
+    class="form"
+  >
+    <input
+      type="email"
+      name="email"
+      id="bd-email"
+      placeholder="Email address"
+      class="email"
+      data-lpignore="true"
+    />
+    <input class="button" type="submit" value="Subscribe" />
+  </form>
+</div>
+
+<div class="container container--gray">
+  {% include "archive.njk" %}
+</div>

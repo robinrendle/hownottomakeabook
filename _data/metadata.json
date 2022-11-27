@@ -1,0 +1,21 @@
+{
+  "title": "How Not To Make A Book",
+  "url": "https://robinrendle.com/",
+  "language": "en",
+  "description": "A newsletter about, well, how not to make a book.",
+  "feed": {
+    "subtitle": "Notes from the field.",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "id": "https://hownottomakeabook.com"
+  },
+  "jsonfeed": {
+    "path": "/feed.json",
+    "url": "https://hownottomakeabook.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Robin Rendle",
+    "email": "robinjrendle@gmail.com.com",
+    "url": "https://robinrendle.com/about/"
+  }
+}

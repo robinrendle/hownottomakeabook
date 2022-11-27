@@ -1,0 +1,17 @@
+
+<style>
+  .post-list li {
+    font-size: 80px;
+  }
+</style>
+
+  <h2>Previously&hellip;</h2>
+  <!-- List of blog posts -->
+  <ul class="post-list">
+      {%- for post in collections.notes | reverse -%}
+        <li>
+          <a class="{{loop.index}}" href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+      {%- endfor -%}
+    </div>
+  </ul>

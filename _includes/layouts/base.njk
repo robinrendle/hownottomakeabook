@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title or metadata.title }}</title>
+    <meta
+      name="description"
+      content="A newsletter about making an indie book"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+    <style>
+      :root {
+        --font-sans: "Hex Franklin", ui-sans-serif, system-ui, -apple-system,
+          sans-serif;
+        --color-theme: #eb5757;
+        --color-border: #eb5757;
+        --color-gray: #444;
+        --bg-gray: #212121;
+        --bg-black: #111;
+        --color-text: #111;
+        --color-text-light: #eee;
+        --border: #555;
+        --horizontal-padding: 15px;
+        --text-size: 1.45rem;
+        --heading-size: 5rem;
+        --intro-size: 1.5rem;
+      }
+
+      @media screen and (min-width: 700px) {
+        :root {
+          --horizontal-padding: 50px;
+        }
+      }
+
+      @media screen and (min-width: 900px) {
+        :root {
+          --horizontal-padding: 70px;
+          --text-size: 1.6rem;
+          --heading-size: 8rem;
+          --intro-size: 1.8rem;
+        }
+      }
+
+      @font-face {
+        font-family: "Magnet";
+        src: url("/fonts/MagnetHeadline-Upright.woff2") format("woff2");
+        font-weight: 600;
+      }
+
+      @font-face {
+        font-family: "LfA Aluminia";
+        src: url("/fonts/LfAAluminia-Roman.woff2") format("woff2");
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "LfA Aluminia";
+        src: url("/fonts/LfAAluminia-Italic.woff2") format("woff2");
+        font-style: italic;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--color-theme);
+        padding-bottom: 10px;
+      }
+
+      body {
+        border-top: 10px solid var(--color-theme);
+        font-family: "LfA Aluminia", sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+      }
+
+      p, ul li, ol li {
+        font-size: var(--text-size);
+      }
+
+      h1, .newsletter-title {
+        font-family: "Magnet", Georgia, serif;
+        font-size: var(--heading-size);
+        margin: 0;
+        color: var(--color-theme);
+        padding-top: 150px;
+        line-height: 0.8;
+      }
+
+      h2 {
+        font-family: "Magnet", Georgia, serif;
+        text-transform: uppercase;
+        font-size: 50px;
+        color: var(--color-gray);
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .post-list {
+        font-family: "Magnet", Georgia, serif;
+        text-transform: uppercase;
+        font-size: 90px;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .post-list a {
+        line-height: 1;
+        color: var(--color-text-light);
+        text-decoration: none;
+      }
+
+      .post-list a:hover {
+        color: var(--color-theme);
+      }
+
+      .container {
+        padding: 0 var(--horizontal-padding) 100px var(--horizontal-padding);
+      }
+
+      .container--dark {
+        background: var(--bg-black);
+        color: var(--color-text-light);
+      }
+
+      .container--gray {
+        padding-top: 50px;
+        background: var(--bg-gray);
+        color: var(--color-text-light);
+      }
+
+      .form {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+      }
+
+      a {
+        color: inherit;
+        transition: all 0.2s linear;
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--color-theme);
+      }
+
+      .email,
+      .button {
+        font-family: "LfA Aluminia", sans-serif;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        font-size: 20px;
+        padding: 10px 15px;
+        border-radius: 0;
+        font-weight: 400;
+      }
+
+      form {
+        max-width: 600px;
+      }
+
+      .button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid white;
+        border-radius: 2px;
+        background: white;
+        color: var(--color-text);
+        font-variant: small-caps;
+        text-transform: lowercase;
+      }
+      
+      .button:hover {
+        cursor: pointer;
+      }
+
+      .button:focus, .button:hover {
+        border-color: var(--color-theme);
+        background-color: var(--color-theme);
+      }
+
+      .email {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid var(--border);
+        border-radius: 2px;
+      }
+
+      .email:focus,
+      .button:focus {
+        border: 1px solid var(--color-theme);
+        outline: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .intro {
+        hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        font-size: var(--intro-size);
+        max-width: 780px;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    {{ content | safe }}
+  </body>
+</html>
+  
