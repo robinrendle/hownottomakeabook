@@ -45,6 +45,13 @@ layout: layouts/base.njk
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: 600px) {
+    .container--text p {
+      line-height: 1.25;
+    }
   }
 
   {# UGH Safari, a sixteen year old bug makes this impossible #}
