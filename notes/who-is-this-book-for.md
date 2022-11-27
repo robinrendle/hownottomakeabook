@@ -1,6 +1,6 @@
 ---
 layout: layouts/note.njk
-title: Who is this book for?
+title: Who is this Book for?
 date: 2022-10-16
 ---
 

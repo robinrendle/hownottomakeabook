@@ -1,6 +1,6 @@
 ---
 layout: layouts/note.njk
-title: Twelve down, fourteen to go
+title: Twelve Down, Fourteen To Go
 date: 2022-11-06
 ---
 
