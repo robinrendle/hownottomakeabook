@@ -39,10 +39,11 @@
         --color-theme: #eb5757;
         --color-border: #eb5757;
         --color-gray: #444;
+        --color-text: #222;
+        --color-text-light: #eee;
         --bg-gray: #212121;
         --bg-black: #111;
-        --color-text: #111;
-        --color-text-light: #eee;
+        --bg-theme: #eb5757;
         --border: #555;
         --horizontal-padding: 15px;
         --heading-size: 5rem;
@@ -104,6 +105,7 @@
         margin: 0;
         padding: 0;
         font-size: 100%;
+        color: var(--color-text);
       }
 
       p, ul li, ol li {
@@ -120,9 +122,10 @@
       }
 
       h2 {
-        font-family: "Magnet", Georgia, serif;
-        text-transform: uppercase;
-        font-size: var(--small-size);
+        font-family: "LfA Aluminia", sans-serif;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        font-size: var(--intro-size);
         color: var(--color-gray);
         margin-top: 0;
         margin-bottom: 0;
@@ -160,6 +163,10 @@
         padding-top: 50px;
         background: var(--bg-gray);
         color: var(--color-text-light);
+      }
+
+      .container--theme {
+        background: var(--bg-theme);
       }
 
       .form {
