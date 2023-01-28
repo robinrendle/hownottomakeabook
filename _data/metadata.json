@@ -4,7 +4,7 @@
   "language": "en",
   "description": "A newsletter about, well, how not to make a book.",
   "feed": {
-    "subtitle": "Notes from the field.",
+    "subtitle": "Notes on making a book in public.",
     "filename": "feed.xml",
     "path": "/feed.xml",
     "id": "https://hownottomakeabook.com"
