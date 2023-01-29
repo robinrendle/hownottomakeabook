@@ -30,7 +30,7 @@ layout: layouts/base.njk
   }
 
   .container--text {
-    max-width: 47rem;
+    max-width: 45rem;
     padding-top: 2rem;
   }
 
@@ -79,7 +79,9 @@ layout: layouts/base.njk
   <div class="container container--text">
     {{ content | safe }}
 
-      — <time class="date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time> 
+      <div class="date">
+      — <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time> 
+    </div>
   </div>
 
   <div class="container container--dark footer">
