@@ -30,7 +30,7 @@ layout: layouts/base.njk
   }
 
   .container--text {
-    max-width: 51rem;
+    max-width: 47rem;
     padding-top: 2rem;
   }
 
@@ -41,25 +41,6 @@ layout: layouts/base.njk
     margin-top: calc(var(--horizontal-padding) / 2);
     margin-bottom: calc(var(--horizontal-padding) / 2);
   }
-
-  .container--text p {
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    line-height: 1.2;
-  }
-
-  @media screen and (min-width: 600px) {
-    .container--text p {
-      line-height: 1.25;
-    }
-  }
-
-  {# UGH Safari, a sixteen year old bug makes this impossible #}
-  {# .container--text p:first-of-type:first-line {
-    text-transform: lowercase !important;
-    font-variant: small-caps;
-  } #}
 
   .container--text a {
     text-decoration-thickness: 1px;
@@ -102,7 +83,7 @@ layout: layouts/base.njk
   </div>
 
   <div class="container container--dark footer">
-    <p class="intro">How do you self publish a book in 2022? That’s what this weekly newsletter by me, your friendly neighborhood blogger Robin Rendle, hopes to figure out. Each week there’ll be drama! Failure! Anxiety! Jokes! Revenge! And, of course, books.</p>
+    <p class="intro">How do you self publish a book in 2022? That’s what this newsletter by me, <a href="https://robinrendle.com">Robin Rendle</a>, hopes to figure out. Each week there’ll be drama! Failure! Anxiety! Jokes! Revenge! And, of course, books.</p>
 
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/hownottomakeabook"

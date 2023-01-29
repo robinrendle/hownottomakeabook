@@ -12,31 +12,28 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./favicon/apple-touch-icon.png"
+      href="/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./favicon/favicon-32x32.png"
+      href="/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./favicon/favicon-16x16.png"
+      href="/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="alternate" type="application/rss+xml" title="How Not To Make A Book RSS feed" href="/feed.xml">
-
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#fafafa" />
     <style>
       :root {
-        --font-sans: "Hex Franklin", ui-sans-serif, system-ui, -apple-system,
-          sans-serif;
         --color-theme: #eb5757;
         --color-border: #eb5757;
         --color-gray: #444;
@@ -50,7 +47,8 @@
         --heading-size: 5rem;
         --subheading-size: 3rem;
         --intro-size: 1.5rem;
-        --text-size: 1.45rem;
+        --text-size: 1.1rem;
+        --text-leading: 1.5;
         --small-size: 3rem;
       }
 
@@ -63,9 +61,11 @@
       @media screen and (min-width: 900px) {
         :root {
           --horizontal-padding: 70px;
-          --text-size: 1.6rem;
+          --text-size: 1.15rem;
+          --text-margin: 1.5rem;
+          --text-leading: 1.5;
           --heading-size: 8rem;
-          --intro-size: 1.8rem;
+          --intro-size: 1.35rem;
           --subheading-size: 5rem;
           --small-size: 5rem;
         }
@@ -78,14 +78,14 @@
       }
 
       @font-face {
-        font-family: "LfA Aluminia";
-        src: url("/fonts/LfAAluminia-Roman.woff2") format("woff2");
+        font-family: "Feijoa";
+        src: url("/fonts/feijoa-medium.woff2") format("woff2");
         font-weight: 400;
       }
 
       @font-face {
-        font-family: "LfA Aluminia";
-        src: url("/fonts/LfAAluminia-Italic.woff2") format("woff2");
+        font-family: "Feijoa";
+        src: url("/fonts/feijoa-medium-italic.woff2") format("woff2");
         font-style: italic;
       }
 
@@ -102,7 +102,7 @@
 
       body {
         border-top: 10px solid var(--color-theme);
-        font-family: "LfA Aluminia", sans-serif;
+        font-family: "Feijoa", serif;
         margin: 0;
         padding: 0;
         font-size: 100%;
@@ -111,6 +111,14 @@
 
       p, ul li, ol li {
         font-size: var(--text-size);
+      }
+
+      .container--text p {
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        line-height: var(--text-leading);        
+        margin-bottom: var(--text-margin);
       }
 
       h1, .newsletter-title {
@@ -244,7 +252,7 @@
         -webkit-hyphens: auto;
         font-size: var(--intro-size);
         max-width: 780px;
-        line-height: 1.2;
+        line-height: 1.5;
       }
 
       .intro a {
