@@ -2,30 +2,8 @@
 layout: layouts/base.njk
 ---
 
-<div class="container container--dark">
+<div class="newsletter-title">
   <h1>How Not To Make a Book</h1>
-
-  <p class="intro">How do you self publish a book in 2022? That’s what this newsletter by me, <a href="https://robinrendle.com">Robin Rendle</a>, hopes to figure out. Each week there’ll be drama! Failure! Anxiety! Jokes! Revenge! And, of course, books.</p>
-
-  <form
-    action="https://buttondown.email/api/emails/embed-subscribe/hownottomakeabook"
-    method="post"
-    target="popupwindow"
-    onsubmit="window.open('https://buttondown.email/hownottomakeabook', 'popupwindow')"
-    class="form"
-  >
-    <input
-      type="email"
-      name="email"
-      id="bd-email"
-      placeholder="Email address"
-      class="email"
-      data-lpignore="true"
-    />
-    <input class="button" type="submit" value="Subscribe" />
-  </form>
 </div>
 
-<div class="container container--gray">
-  {% include "archive.njk" %}
-</div>
+{% include "archive.njk" %}

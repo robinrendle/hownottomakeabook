@@ -1,18 +1,90 @@
-
 <style>
-  .post-list li {
-    font-size: var(--subheading-size);
-    line-height: 1;
+
+  :root {
+    --listlength: 0;
+  }
+  
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    counter-reset: tidbit-counter var(--listlength); 
+  }
+
+  .post-list-item {
+    padding: 10px;
+    border-radius: 3px;
+    background: var(--bg-white);
+    border: 1px solid var(--bg-light);
+  }
+
+  .post-list-item:before {
+    counter-increment: tidbit-counter -1;
+    content: counter(tidbit-counter);
+  }
+
+  .post-list-item-title {
+    font-size: var(--text-size);
+    line-height: var(--text-leading);
+  }
+
+  .post-list p {
+    margin-top: 0;
   }
 </style>
 
-  <h2>Previously&hellip;</h2>
-  <!-- List of blog posts -->
-  <ul class="post-list">
-      {%- for post in collections.notes | reverse -%}
-        <li>
-          <a class="{{loop.index}}" href="{{ post.url }}">{{ post.data.title }}</a>
-        </li>
-      {%- endfor -%}
+<div class="container container--text">
+  {%- for post in collections.notes | reverse | head(1) -%}
+    <a class="index-post {{loop.index}}" href="{{ post.url }}">
+      <h2 class="h1">{{ post.data.title }}</h2>
+      <div class="date">
+        — <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time> 
+      </div>
+    </a>
+
+    {{ post.templateContent | safe }}
+
+    <div class="pagination">
+      {% set previousPost = collections.notes | getPreviousCollectionItem(post) %}
+      {% if previousPost %}↤ <a href="{{ previousPost.url }}">Previous</a>{% endif %}
     </div>
-  </ul>
+
+    {# {% set nextPost = collections.notes | getNextCollectionItem(post) %} #}
+    {# {% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
+  {%- endfor -%}#}
+
+  {# <ol class="post-list" reversed>
+  {%- for post in collections.notes | reverse -%}
+    <li>
+      <a class="post-list-item {{loop.index}}" href="{{ post.url }}" style"--listlength: {{loop.length}}">
+        <h3 class="post-list-item-title">{{ post.data.title }}</h3>
+      </a>
+    </li>#}
+  {%- endfor -%}
+
+</div>
+
+
+ <div class="container--dark footer">
+  <div class="container--text">
+    <p>How do you self publish a book in 2022? That’s what this newsletter by me, <a href="https://robinrendle.com">Robin Rendle</a>, hopes to figure out. Each week there’ll be drama! Failure! Jokes! Revenge! And, of course, books.</p>
+
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/hownottomakeabook"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.email/hownottomakeabook', 'popupwindow')"
+      class="form"
+    >
+      <input
+        type="email"
+        name="email"
+        id="bd-email"
+        placeholder="Email address"
+        class="email"
+        data-lpignore="true"
+      />
+      <input class="button" type="submit" value="Subscribe" />
+    </form>
+  </div>
+</div>

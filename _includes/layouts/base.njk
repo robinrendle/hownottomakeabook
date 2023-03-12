@@ -33,236 +33,354 @@
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#fafafa" />
     <style>
+    :root {
+      --color-theme: #eb5757;
+      --color-border: #eb5757;
+      --color-gray: #444;
+      --color-text: #222;
+      --color-text-light: #eee;
+      --bg-gray: #212121;
+      --bg-black: #111;
+      --bg-theme: #eb5757;
+      --bg-white: #fff;
+      --bg-light: #eee;
+      --border: #555;
+      --horizontal-padding: 15px;
+      --h1-size: 1.4rem;
+      --heading-size: 22vw;
+      --subheading-size: 3rem;
+      --intro-size: 1.2rem;
+      --text-size: 1.1rem;
+      --text-leading: 1.5;
+      --small-size: 1rem;
+    }
+
+    @media screen and (min-width: 500px) {
       :root {
-        --color-theme: #eb5757;
-        --color-border: #eb5757;
-        --color-gray: #444;
-        --color-text: #222;
-        --color-text-light: #eee;
-        --bg-gray: #212121;
-        --bg-black: #111;
-        --bg-theme: #eb5757;
-        --border: #555;
-        --horizontal-padding: 15px;
-        --heading-size: 5rem;
-        --subheading-size: 3rem;
-        --intro-size: 1.2rem;
+        --horizontal-padding: 50px;
+      }
+    }
+
+    @media screen and (min-width: 700px) {
+      :root {
+        --horizontal-padding: 70px;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      :root {
+        --horizontal-padding: 70px;
         --text-size: 1.1rem;
-        --text-leading: 1.5;
-        --small-size: 3rem;
+        --text-margin: 1.5rem;
+        --text-leading: 1.6;
+        --intro-size: 1.35rem;
+        --subheading-size: 5rem;
+        --small-size: 1rem;
+        --h1-size: 1.6rem;
       }
+    }
 
-      @media screen and (min-width: 700px) {
-        :root {
-          --horizontal-padding: 50px;
-        }
-      }
+    @font-face {
+      font-family: "Magnet";
+      src: url("/fonts/MagnetHeadline-Upright.woff2") format("woff2");
+      font-weight: 600;
+    }
 
-      @media screen and (min-width: 900px) {
-        :root {
-          --horizontal-padding: 70px;
-          --text-size: 1.1rem;
-          --text-margin: 1.4rem;
-          --text-leading: 1.6;
-          --heading-size: 8rem;
-          --intro-size: 1.35rem;
-          --subheading-size: 5rem;
-          --small-size: 5rem;
-        }
-      }
+    @font-face {
+      font-family: "Feijoa";
+      src: url("/fonts/feijoa-medium.woff2") format("woff2");
+      font-weight: 400;
+    }
 
-      @font-face {
-        font-family: "Magnet";
-        src: url("/fonts/MagnetHeadline-Upright.woff2") format("woff2");
-        font-weight: 600;
-      }
+    @font-face {
+      font-family: "Feijoa";
+      src: url("/fonts/feijoa-medium-italic.woff2") format("woff2");
+      font-style: italic;
+    }
 
-      @font-face {
-        font-family: "Feijoa";
-        src: url("/fonts/feijoa-medium.woff2") format("woff2");
-        font-weight: 400;
-      }
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
 
-      @font-face {
-        font-family: "Feijoa";
-        src: url("/fonts/feijoa-medium-italic.woff2") format("woff2");
-        font-style: italic;
-      }
+    html {
+      background: var(--color-theme);
+      padding-bottom: 10px;
+    }
 
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
+    body {
+      border-top: 10px solid var(--color-theme);
+      font-family: "Feijoa", serif;
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      color: var(--color-text);
+      background: var(--bg-white);
+    }
 
-      html {
-        background: var(--color-theme);
-        padding-bottom: 10px;
-      }
+    p, ul li, ol li {
+      font-size: var(--text-size);
+    }
 
-      body {
-        border-top: 10px solid var(--color-theme);
-        font-family: "Feijoa", serif;
-        margin: 0;
-        padding: 0;
-        font-size: 100%;
-        color: var(--color-text);
-      }
+    .newsletter-title {
+      font-size: var(--heading-size);
+      font-family: "Magnet", Georgia, serif;
+      padding-top: 50px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--color-text-light);
+      line-height: 0.8;
+      transform: rotate(180deg);
+    }
 
-      p, ul li, ol li {
-        font-size: var(--text-size);
-      }
+    .newsletter-title h1 {
+      font-size: inherit;
+      color: var(--color-text-light);
+      font-style: inherit;
+    }
 
-      .container--text p {
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-        line-height: var(--text-leading);        
-        margin-bottom: var(--text-margin);
-      }
+    .newsletter-title a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
 
-      h1, .newsletter-title {
-        font-family: "Magnet", Georgia, serif;
-        font-size: var(--heading-size);
-        margin: 0;
-        color: var(--color-theme);
-        padding-top: 150px;
-        line-height: 0.8;
-      }
+    .newsletter-title a:hover {
+      color:inherit;
+    }
 
-      h2 {
-        font-family: "LfA Aluminia", sans-serif;
-        font-variant: small-caps;
-        text-transform: lowercase;
-        font-size: var(--intro-size);
-        color: var(--color-gray);
-        margin-top: 0;
-        margin-bottom: 0;
-      }
+    h1, .h1 {
+      margin: 0;
+      font-size: var(--h1-size);
+      font-weight: normal;
+      font-style: italic;
+      color: var(--color-text);
+      margin-bottom: 0;
+      text-transform: initial;
+      font-variant: initial;
+    }
 
-      .post-list {
-        font-family: "Magnet", Georgia, serif;
-        font-size: var(--subheading-size);
-        list-style: none;
-        padding: 0;
-        margin-bottom: 0;
-        margin-top: 0;
-      }
+    .h1 {
+      font-size: var(--h1-size);
+    }
 
-      .post-list a {
-        line-height: 1;
-        color: var(--color-text-light);
-        text-decoration: none;
-      }
+    h2, .h2 {
+      font-family: "LfA Aluminia", sans-serif;
+      font-variant: small-caps;
+      text-transform: lowercase;
+      font-size: var(--intro-size);
+      color: var(--color-gray);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
-      .post-list a:hover {
-        color: var(--color-theme);
-      }
+    .post-list {
+      {# font-family: "Magnet", Georgia, serif; #}
+      {# font-size: var(--subheading-size); #}
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
 
-      .container {
-        padding: 0 var(--horizontal-padding) 100px var(--horizontal-padding);
-      }
+    .post-list a {
+      line-height: 1;
+      text-decoration: none;
+    }
 
-      .container--dark {
-        background: var(--bg-black);
-        color: var(--color-text-light);
-      }
+    .post-list a:hover {
+      color: var(--color-theme);
+    }
 
-      .container--gray {
-        padding-top: 50px;
-        background: var(--bg-gray);
-        color: var(--color-text-light);
-      }
+    .container {
+      margin: 0 auto;
+      padding: 0 var(--horizontal-padding) 100px var(--horizontal-padding);
+    }
 
-      .container--theme {
-        background: var(--bg-theme);
-      }
+    .container--dark {
+      background: var(--bg-black);
+      color: var(--color-text-light);
+    }
 
-      .form {
-        display: flex;
-        width: 100%;
-        gap: 20px;
-      }
+    .container--light {
+      background: var(--bg-light);
+      padding-top: 80px;
+      padding-bottom: 0;
+    }
 
-      a {
-        color: inherit;
-        transition: all 0.2s linear;
-      }
+    .container--gray {
+      padding-top: 50px;
+      background: var(--bg-gray);
+      color: var(--color-text-light);
+    }
 
-      a:hover,
-      a:focus {
-        color: var(--color-theme);
-      }
+    .container--theme {
+      background: var(--bg-theme);
+    }
 
-      .email,
-      .button {
-        font-family: "LfA Aluminia", sans-serif;
-        font-variant: small-caps;
-        text-transform: lowercase;
-        font-size: 20px;
-        padding: 10px 15px;
-        border-radius: 0;
-        font-weight: 400;
-      }
+    .form {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+    }
 
-      form {
-        max-width: 600px;
-      }
+    a {
+      color: inherit;
+      transition: all 0.2s linear;
+    }
 
-      .button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border: 1px solid white;
-        border-radius: 2px;
-        background: white;
-        color: var(--color-text);
-        font-variant: small-caps;
-        text-transform: lowercase;
-      }
-      
-      .button:hover {
-        cursor: pointer;
-      }
+    a:hover,
+    a:focus {
+      color: var(--color-theme);
+    }
 
-      .button:focus, .button:hover {
-        border-color: var(--color-theme);
-        background-color: var(--color-theme);
-      }
+    .email,
+    .button {
+      font-family: "Feijoa", sans-serif;
+      font-size: var(--text-size);
+      padding: 10px 15px 12px;
+      border-radius: 0;
+      font-weight: 400;
+      color: white;
+    }
 
-      .email {
-        width: 100%;
-        background-color: transparent;
-        border: 1px solid var(--border);
-        border-radius: 2px;
-      }
+    form {
+      max-width: 600px;
+    }
 
-      .email:focus,
-      .button:focus {
-        border: 1px solid var(--color-theme);
-        outline: none;
-      }
+    .button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: 1px solid white;
+      border-radius: 2px;
+      background: white;
+      color: var(--color-text);
+      font-variant: small-caps;
+      text-transform: lowercase;
+    }
+    
+    .button:hover {
+      cursor: pointer;
+    }
 
-      img {
-        max-width: 100%;
-      }
+    .button:focus, .button:hover {
+      border-color: var(--color-theme);
+      background-color: var(--color-theme);
+    }
 
-      .intro {
-        hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        font-size: var(--intro-size);
-        max-width: 780px;
-        line-height: 1.5;
-      }
+    .email {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
 
-      .intro a {
-        text-decoration-thickness: 1px;
-      }
+    .email:focus,
+    .button:focus {
+      border: 1px solid var(--color-theme);
+      outline: none;
+    }
 
-      blockquote {
-        padding-right: 0;
-        margin-right: 0;
-      }
+    img {
+      max-width: 100%;
+    }
+
+    .intro {
+      hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      font-size: var(--intro-size);
+      max-width: 780px;
+      line-height: 1.5;
+    }
+
+    .intro a {
+      text-decoration-thickness: 1px;
+    }
+
+    blockquote {
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .container--text {
+      padding: 0 var(--horizontal-padding) 100px;
+      max-width: 45rem;
+      margin: 0 auto;
+    }
+
+    .container--text p {
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+      line-height: var(--text-leading);        
+      margin-bottom: var(--text-margin);
+    }
+
+    .container--text p:has(img) {
+      width: 100vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 1400px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .container--text p:has(img) img {
+      width: 100%;
+    }
+
+    .date {
+      font-size: var(--small-size);
+      opacity: 0.4;
+      text-transform: lowercase;
+      font-variant: small-caps;
+    }
+
+    .container--text a {
+      text-decoration-thickness: 1px;
+    }
+
+    .index-post {
+      text-decoration: none;
+    }
+
+    .index-post:hover {
+      color: inherit;
+    }
+
+    main {
+      background: white;
+    }
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 80px !important;
+    }
+
+    .footer p {
+      margin-bottom: 40px;
+    }
+
+    .container--dark:nth-child(3) {
+      padding-bottom: 50px;
+    }
+
+    .container--dark:last-child {
+      padding-top: 40px;
+      margin-top: 0;
+      border-top: 1px solid var(--color-gray);
+    }
+
+    .pagination {
+      border-top: 1px solid var(--bg-light);
+      border-bottom: 1px solid var(--bg-light);
+      padding: 20px 0;
+      margin-top: 80px;
+    }
     </style>
   </head>
   <body>
