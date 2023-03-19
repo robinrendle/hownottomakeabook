@@ -13,13 +13,13 @@ The reason why I’m writing this new chapter for the book is sort of why I wrot
 
 But, look, they are undeniably beautiful:
 
-![A photograph of the letters on Trajan’s Column](images/trajan-column.jpg)
+![A photograph of the letters on Trajan’s Column](/images/trajan-column.jpg)
 
 To kickstart this research, today and tomorrow I’m tackling _The Eternal Letter_, a beautiful collection of essays about these shapes and their impact on the typographic arts. This book is filled to the brim with ideas and excellent research and names I’ve only read in the footnotes of other type books.
 
 So this is where I’m at today: I’m cat sitting for a friend right now and I’ve piled books and notes all along her desk and this kind of messiness — pen in hand, book in lap — is how I want to spend the rest of my dang life.
 
-![A photograph of my desk with books open and notes scribbled in the margins](images/research.jpg)
+![A photograph of my desk with books open and notes scribbled in the margins](/images/research.jpg)
 
 _The Eternal Letter_ happens to be edited by the type aficionado Paul Shaw who undeniably has one of [the best websites in the known universe](https://www.paulshawletterdesign.com/). Every page of it, every little thing is what I dream for all websites. Clicking the header or refreshing the page and the title switches to a different font each time. Plus there’s [the shop](https://www.paulshawletterdesign.com/category/writings/shop/) which I’ve now opened ten thousand tabs from and there’s this...wait..what is this? [Legacy of Letters](https://www.paulshawletterdesign.com/2022/11/announcing-legacy-of-letters-2023-letterpress-in-italy/)? This looks like a Craig Mod-style walking tour around Italy with visits to letterpress workshops. This looks so impossibly cool! And and and...
 
