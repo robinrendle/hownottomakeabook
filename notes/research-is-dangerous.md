@@ -23,6 +23,6 @@ So this is where I’m at today: I’m cat sitting for a friend right now and I�
 
 _The Eternal Letter_ happens to be edited by the type aficionado Paul Shaw who undeniably has one of [the best websites in the known universe](https://www.paulshawletterdesign.com/). Every page of it, every little thing is what I dream for all websites. Clicking the header or refreshing the page and the title switches to a different font each time. Plus there’s [the shop](https://www.paulshawletterdesign.com/category/writings/shop/) which I’ve now opened ten thousand tabs from and there’s this...wait..what is this? [Legacy of Letters](https://www.paulshawletterdesign.com/2022/11/announcing-legacy-of-letters-2023-letterpress-in-italy/)? This looks like a Craig Mod-style walking tour around Italy with visits to letterpress workshops. This looks so impossibly cool! And and and...
 
-Gah! This is the problem with research. It’s all to easy to go down rabbit holes that look like they have valuable research buried in them but when you get neck-deep in the subject you realize that you’ve simply faffed about for several hours instead.
+Gah! This is the problem with research. It’s all too easy to go down rabbit holes that look like they have valuable research buried in them but when you get neck-deep in the subject you realize that you’ve simply faffed about for several hours instead.
 
 Research is dangerous; back to the book.
